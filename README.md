@@ -46,7 +46,7 @@ This approach enables real-time risk stratification and adaptive clinical decisi
 ### Bayesian Dose Selection
 
 <p align="center">
-  <img src="reports/figures/posterior_probability_50mg_worse.png" width="700">
+  <img src="./reports/figures/posterior_probability_50mg_worse.png" width="700">
 </p>
 
 Across repeated simulated trials, the posterior probability that the 50 mg dose was inferior remained consistently close to 1.  
