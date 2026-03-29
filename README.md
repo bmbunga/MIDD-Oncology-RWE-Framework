@@ -18,6 +18,32 @@ This project demonstrates how quantitative methods can be integrated across the 
 The framework is designed as a portfolio-grade project for quantitative clinical modeling, pharmacoepidemiology, and MIDD applications.
 
 ---
+## Key Results
+
+### Tumor Dynamics Simulation
+
+![Tumor trajectories](reports/figures/oncology_tumor_trajectories.png)
+
+Simulated tumor trajectories under different dose levels using a mechanistic oncology model (Simeoni model). Higher doses lead to stronger tumor shrinkage.
+
+---
+
+### Dynamic Risk Prediction
+
+![Dynamic prediction](reports/figures/dynamic_prediction_patient1.png)
+
+Patient-specific prediction of future event risk based on tumor trajectory using joint modeling. This enables individualized risk assessment at interim timepoints.
+
+---
+
+### Bayesian Dose Selection
+
+![Bayesian decision](reports/figures/oncology_tumor_trajectories.png)
+
+Posterior probability-based dose selection demonstrating robust identification of the optimal dose across simulated trials.
+
+---
+
 
 ## Key Components
 
@@ -111,13 +137,7 @@ adaptive trial decisions
 Bayesian dose selection probabilities
 Example Oncology Insight
 
-In the oncology simulation module:
-
-the higher dose produced faster tumor shrinkage
-tumor dynamics were linked to survival risk through joint modeling
-adaptive and Bayesian decision rules consistently selected the optimal dose across simulated trials
-
-This reproduces a realistic MIDD use case for dose optimization in oncology.
+---
 
 
 How to Run
