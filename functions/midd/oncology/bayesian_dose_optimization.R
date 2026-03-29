@@ -4,9 +4,6 @@ bayesian_dose_optimization <- function(cox_fit) {
   beta_hat <- s$coefficients["dose_groupDose_50mg", "coef"]
   se_hat   <- s$coefficients["dose_groupDose_50mg", "se(coef)"]
   
-  # Approximation bayésienne normale :
-  # posterior(beta | data) ~ N(beta_hat, se_hat^2)
-  # On cherche P(beta > 0), i.e. HR(50 vs 100) > 1
   post_prob_50_worse <- 1 - pnorm(0, mean = beta_hat, sd = se_hat)
   
   preferred_dose <- if (post_prob_50_worse > 0.8) {

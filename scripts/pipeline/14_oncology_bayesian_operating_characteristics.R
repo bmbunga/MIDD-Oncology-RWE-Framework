@@ -16,14 +16,29 @@ res <- simulate_bayesian_dose_selection(
 
 print(table(res$preferred_dose))
 
-p <- ggplot(res, aes(x = post_prob_50_worse)) +
-  geom_histogram(bins = 20, fill = "steelblue", alpha = 0.7) +
+p <- ggplot(res, aes(x = post_prob_50_worse, y = 1)) +
+  geom_jitter(height = 0.05, alpha = 0.7, size = 2) +
+  geom_vline(xintercept = 0.8, linetype = "dashed", linewidth = 1) +
   labs(
     title = "Posterior probability that 50 mg is worse",
     x = "Posterior probability",
-    y = "Count"
+    y = NULL
+  ) +
+  coord_cartesian(xlim = c(0, 1)) +
+  theme(
+    axis.text.y = element_blank(),
+    axis.ticks.y = element_blank()
   )
 
 print(p)
+#p <- ggplot(res, aes(x = post_prob_50_worse)) +
+  #geom_histogram(bins = 20, fill = "steelblue", alpha = 0.7) +
+  #labs(
+    #title = "Posterior probability that 50 mg is worse",
+    #x = "Posterior probability",
+    #y = "Count"
+  #)
+
+#print(p)
 
 cat("14_oncology_bayesian_operating_characteristics.R terminé.\n")

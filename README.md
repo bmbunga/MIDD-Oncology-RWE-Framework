@@ -18,30 +18,42 @@ This project demonstrates how quantitative methods can be integrated across the 
 The framework is designed as a portfolio-grade project for quantitative clinical modeling, pharmacoepidemiology, and MIDD applications.
 
 ---
+
 ## Key Results
 
-### Tumor Dynamics Simulation
+### Tumor Dynamics under Treatment
 
-![Tumor trajectories](reports/figures/oncology_tumor_trajectories.png)
+<p align="center">
+  <img src="reports/figures/oncology_tumor_trajectories.png" width="700">
+</p>
 
-Simulated tumor trajectories under different dose levels using a mechanistic oncology model (Simeoni model). Higher doses lead to stronger tumor shrinkage.
+Simulated tumor trajectories using a mechanistic oncology model (Simeoni model).  
+Higher dose levels lead to faster tumor shrinkage and reduced inter-individual variability.
 
 ---
 
-### Dynamic Risk Prediction
+### Dynamic Risk Prediction (Joint Modeling)
 
-![Dynamic prediction](reports/figures/dynamic_prediction_patient1.png)
+<p align="center">
+  <img src="reports/figures/dynamic_prediction_patient1.png" width="700">
+</p>
 
-Patient-specific prediction of future event risk based on tumor trajectory using joint modeling. This enables individualized risk assessment at interim timepoints.
+Individualized prediction of future event risk based on longitudinal tumor dynamics.  
+This approach enables real-time risk stratification and adaptive clinical decision-making.
 
 ---
 
 ### Bayesian Dose Selection
 
-![Bayesian decision](reports/figures/oncology_tumor_trajectories.png)
+<p align="center">
+  <img src="reports/figures/posterior_probability_50mg_worse.png" width="700">
+</p>
 
-Posterior probability-based dose selection demonstrating robust identification of the optimal dose across simulated trials.
+Across repeated simulated trials, the posterior probability that the 50 mg dose was inferior remained consistently close to 1.  
 
+This indicates a very strong treatment effect and highly robust Bayesian dose selection, with the 100 mg dose being selected in nearly all scenarios.
+
+Note: the limited variability in posterior probabilities reflects a high signal-to-noise ratio in the simulated scenario.
 ---
 
 
