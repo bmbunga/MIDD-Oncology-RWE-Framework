@@ -73,3 +73,79 @@ Joint modeling
 Dynamic prediction
 ↓
 Adaptive decision / dose optimization
+
+Project Structure
+MIDD_RWE_Project/
+├── data/
+├── functions/
+│   ├── rwe/
+│   └── midd/
+│       └── oncology/
+├── scripts/
+│   ├── exploratory/
+│   └── pipeline/
+├── reports/
+├── renv.lock
+└── README.md
+
+Main Methods and Packages
+survival
+nlme
+JMbayes2
+deSolve
+ggplot2
+dplyr
+
+Example Outputs
+
+The framework produces:
+
+propensity-score weighted treatment effect estimates
+repeated-dose PK profiles
+biomarker trajectories
+tumor growth/shrinkage trajectories
+Cox model estimates
+joint model estimates
+dynamic patient-specific risk predictions
+adaptive trial decisions
+Bayesian dose selection probabilities
+Example Oncology Insight
+
+In the oncology simulation module:
+
+the higher dose produced faster tumor shrinkage
+tumor dynamics were linked to survival risk through joint modeling
+adaptive and Bayesian decision rules consistently selected the optimal dose across simulated trials
+
+This reproduces a realistic MIDD use case for dose optimization in oncology.
+
+
+How to Run
+Example pipeline scripts
+scripts/pipeline/01_simulate_trial.R
+scripts/pipeline/02_fit_models.R
+scripts/pipeline/03_dynamic_prediction.R
+scripts/pipeline/04_adaptive_trial.R
+scripts/pipeline/05_oncology_simulate_trial.R
+scripts/pipeline/06_oncology_fit_models.R
+scripts/pipeline/08_oncology_joint_model.R
+scripts/pipeline/09_oncology_joint_model_stable.R
+scripts/pipeline/10_oncology_dynamic_prediction.R
+scripts/pipeline/11_oncology_adaptive_trial_simulation.R
+scripts/pipeline/13_oncology_bayesian_dose_optimization.R
+scripts/pipeline/14_oncology_bayesian_operating_characteristics.R
+
+
+Positioning
+
+This project is relevant for roles such as:
+
+Quantitative Scientist
+MIDD Scientist
+Pharmacometrics Scientist
+Advanced Biostatistician
+Real-World Data Scientist
+Author
+
+Blaise Mbunga Mputu
+Senior Biostatistics / RWE / Quantitative Clinical Modeling
